@@ -1,0 +1,212 @@
+/* ================================= */
+/* NAVBAR */
+/* ================================= */
+
+.header-navbar {
+  width: 100%;
+  margin: 0;
+
+  background-color: #3d4143;
+
+  border-bottom: 1px solid #55595b;
+
+  position: relative;
+  z-index: 100;
+}
+
+
+/* ================================= */
+/* MAIN NAVIGATION */
+/* ================================= */
+
+.header-navbar .main-nav {
+  margin: 0;
+  padding: 0 40px;
+
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 45px;
+}
+
+
+/* ================================= */
+/* MAIN NAV ITEMS */
+/* ================================= */
+
+.header-navbar .main-nav > li {
+  position: relative;
+}
+
+
+/* ================================= */
+/* MAIN NAV LINKS */
+/* ================================= */
+
+.header-navbar .main-nav > li > a {
+  display: block;
+
+  padding: 14px 10px;
+
+  color: #f7f7f5;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+      color 0.25s ease,
+      background-color 0.25s ease;
+}
+
+
+/* ================================= */
+/* MAIN NAV HOVER */
+/* ================================= */
+
+.header-navbar .main-nav > li > a:hover {
+  color: #d1d2ce;
+}
+
+
+/* ================================= */
+/* DROPDOWN MENU */
+/* ================================= */
+
+.header-navbar .dropdown-menu {
+  display: none;
+
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 200px;
+
+  margin: 0;
+  padding: 7px 0;
+
+  list-style: none;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dededb;
+
+  border-radius: 0 0 6px 6px;
+
+  box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.14);
+
+  z-index: 200;
+}
+
+
+/* ================================= */
+/* SHOW DROPDOWN */
+/* ================================= */
+
+.header-navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* ================================= */
+/* DROPDOWN ITEMS */
+/* ================================= */
+
+.header-navbar .dropdown-menu li {
+  width: 100%;
+}
+
+
+/* ================================= */
+/* DROPDOWN LINKS */
+/* ================================= */
+
+.header-navbar .dropdown-menu a {
+  display: block;
+
+  padding: 11px 16px;
+
+  color: #343638;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      padding-left 0.2s ease;
+}
+
+
+/* ================================= */
+/* DROPDOWN HOVER */
+/* ================================= */
+
+.header-navbar .dropdown-menu a:hover {
+  background-color: #f0f0ed;
+
+  color: #1f2021;
+
+  padding-left: 20px;
+}
+
+
+/* ================================= */
+/* KEYBOARD FOCUS */
+/* ================================= */
+
+.header-navbar a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media screen and (max-width: 850px) {
+
+  .header-navbar .main-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 5px 20px;
+
+      padding: 5px 15px;
+  }
+
+  .header-navbar .main-nav > li > a {
+      padding: 10px 8px;
+
+      font-size: 11px;
+      letter-spacing: 0.8px;
+  }
+
+  .header-navbar .dropdown-menu {
+      width: 175px;
+  }
+
+  .header-navbar .dropdown-menu a {
+      padding: 10px 14px;
+
+      font-size: 12px;
+  }
+}

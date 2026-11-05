@@ -1,0 +1,208 @@
+/* ================================= */
+/* COLOR PALETTE */
+/* ================================= */
+
+:root {
+  --charcoal: #303336;
+  --dark-charcoal: #232527;
+
+  --purple: #765887;
+  --purple-dark: #5c426b;
+  --purple-soft: #a98bb8;
+
+  --lavender: #e8dcef;
+  --lavender-light: #f5eff8;
+
+  --white: #ffffff;
+  --off-white: #faf9fb;
+
+  --text: #292b2c;
+  --text-light: #69666c;
+
+  --border: #e6e1e8;
+}
+
+
+/* ================================= */
+/* GLOBAL */
+/* ================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--white);
+  color: var(--text);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.header {
+  width: 100%;
+
+  background-color: var(--white);
+}
+
+
+/* ================================= */
+/* CLINIC NAME */
+/* ================================= */
+
+.clinic-name {
+  padding: 20px;
+
+  background:
+      linear-gradient(
+          90deg,
+          #ffffff 0%,
+          #f7f2f9 50%,
+          #ffffff 100%
+      );
+
+  text-align: center;
+}
+
+.clinic-name h1 {
+  margin: 0;
+
+  color: #46384e;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ================================= */
+/* HERO SECTION */
+/* ================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 8%;
+
+  background-image:
+      linear-gradient(
+          90deg,
+          rgba(20, 22, 23, 0.72) 0%,
+          rgba(20, 22, 23, 0.38) 50%,
+          rgba(20, 22, 23, 0.12) 100%
+      ),
+      url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* Purple accent at bottom of hero */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+      linear-gradient(
+          90deg,
+          var(--purple-dark),
+          var(--purple-soft),
+          var(--purple-dark)
+      );
+}
+
+
+/* ================================= */
+/* HERO TEXT */
+/* ================================= */
+
+.hero-text {
+  position: relative;
+
+  width: 100%;
+  max-width: 610px;
+
+  padding: 38px;
+
+  background-color: rgba(27, 29, 30, 0.69);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+
+  box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(5px);
+
+  color: var(--white);
+
+  z-index: 2;
+}
+
+
+/* ================================= */
+/* HERO LABEL */
+/* ================================= */
+
+.hero-label {
+  margin: 0 0 14px;
+
+  color: #d7c3df;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+}
+
+
+/* ================================= */
+/* HERO HEADING */
+/* ================================= */
+
+.hero-text h2 {
+  margin: 0 0 20px;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 50px;
+  
